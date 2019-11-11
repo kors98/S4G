@@ -3,7 +3,7 @@
 /** Witcher Script file
 /***********************************************************************/
 /** Object classes exprots
-/** Copyright © 2009 Dexio's Late Night R&D Home Center
+/** Copyright Â© 2009 Dexio's Late Night R&D Home Center
 /***********************************************************************/
 
 struct SEnemySelection
@@ -4019,7 +4019,7 @@ mBoolean( true ) );
 			level = level + 1;
 			
 			talents = GetTalentPoints();
-			SetTalentPoints( talents + 1 );
+			SetTalentPoints( talents + 2 );
 			
 			levelname = StringToName("Level" + level);
 			GetCharacterStats().AddAbility( levelname );
@@ -7362,7 +7362,7 @@ thePlayer.RemoveAllBuffs();
 				itemName = StringToName("magic_s" + i + "_2" );
 				if ( thePlayer.GetCharacterStats().HasAbility(itemName) ) thePlayer.GetCharacterStats().RemoveAbility(itemName);
 			}
-		talents = level - 1;
+		talents = (level - 1) * 2;
 	}	
 	function AllowCombatRotation(flag : bool)
 	{
@@ -7503,7 +7503,7 @@ thePlayer.RemoveAllBuffs();
 				if ( !FactsDoesExist('import_item_dyaebl') )
 				{
 					FactsAdd( 'import_item_dyaebl', 1 );
-					Log( "Importing equipped item: D’yaebl " );
+					Log( "Importing equipped item: DÂ’yaebl " );
 					thePlayer.GetInventory().AddItem(StringToName("Dyaebl"), 1);
 				}
 			}
@@ -7512,7 +7512,7 @@ thePlayer.RemoveAllBuffs();
 				if ( !FactsDoesExist('import_item_ardaenye') )
 				{
 					FactsAdd( 'import_item_ardaenye', 1 );
-					Log( "Importing equipped item: Ard’aenye " );
+					Log( "Importing equipped item: ArdÂ’aenye " );
 					thePlayer.GetInventory().AddItem(StringToName("Ardaenye"), 1);
 				}
 			}
